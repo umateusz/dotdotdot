@@ -22,12 +22,9 @@ add_to_bashrc='
 ### dotdotdot ###
 
 # load all files from ~/dotdotdot/system
-for file in $(find ~/dotdotdot/system)
-    do
-        if [ -f $file ]; then
-	    . $file
-        fi
-done'
+if [ -f ~/dotdotdot/dotdotdot.sh ]; then
+    . ~/dotdotdot/dotdotdot.sh
+fi'
 echo "$add_to_bashrc" >> ~/.bashrc
 
 source ~/.bashrc
