@@ -1,0 +1,1 @@
+alias yt="youtube-dl --add-metadata -i"

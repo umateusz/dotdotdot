@@ -28,3 +28,9 @@ fi'
 echo "$add_to_bashrc" >> ~/.bashrc
 
 source ~/.bashrc
+
+echo "Running apt-get..."
+sudo apt-get update && sudo apt-get install $(cat $DOTDOTDOT_PATH/system/apt.list)
+
+echo "Running python pip install"
+/usr/bin/python3 -m pip install -r $DOTDOTDOT_PATH/system/py_requirements.txt
