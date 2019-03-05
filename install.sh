@@ -7,7 +7,7 @@ function backup_file()
     date=`date '+%Y-%m-%d-%H-%M-%S-%s'`
     filename=`basename "$1"`
     new_filename=$filename-$date
-    cp $1 $DOTDOTDOT_PATH/backups/$new_filename
+    cp -r $1 $DOTDOTDOT_PATH/backups/$new_filename
 }
 
 # check if project is aready installed
@@ -34,3 +34,16 @@ sudo apt-get update && sudo apt-get install $(cat $DOTDOTDOT_PATH/system/apt.lis
 
 echo "Running python pip install"
 /usr/bin/python3 -m pip install -r $DOTDOTDOT_PATH/system/py_requirements.txt
+
+echo "Linking vscode settings..."
+backup_file ~/.config/Code/User/settings.json
+backup_file ~/.config/Code/User/keybindings.json
+backup_file ~/.config/Code/User/snippets/
+
+rm -rf ~/.config/Code/User/settings.json
+rm -rf ~/.config/Code/User/keybindings.json
+rm -rf ~/.config/Code/User/snippets
+
+ln -s $DOTDOTDOT_PATH/system/vscode/settings.json ~/.config/Code/User/settings.json
+ln -s $DOTDOTDOT_PATH/system/vscode/keybindings.json ~/.config/Code/User/keybindings.json
+ln -s $DOTDOTDOT_PATH/system/vscode/snippets ~/.config/Code/User/snippets

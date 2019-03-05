@@ -1,0 +1,40 @@
+{
+    "files.autoSave": "afterDelay",
+    "git.autofetch": true,
+    "files.exclude": {
+        "**/__pycache__/**": true
+    },
+    "cSpell.language": ",pl,en,en-GB,en-US,pl-PL",
+    "cSpell.userWords": [
+        "batch"
+    ],
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "go",
+        "handlebars",
+        "html",
+        "jade",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "pub",
+        "python",
+        "restructuredtext",
+        "rust",
+        "scss",
+        "shellscript",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml"
+    ]
+}
