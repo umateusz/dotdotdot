@@ -31,7 +31,7 @@ function __run_command_for_file_or_pipe(){
 
     # usage e.g. ls | command
     while read path; do
-        run
+        run || break
     done;
 }
 
