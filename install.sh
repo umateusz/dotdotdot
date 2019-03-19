@@ -47,3 +47,9 @@ rm -rf ~/.config/Code/User/snippets
 ln -s $DOTDOTDOT_PATH/system/vscode/settings.json ~/.config/Code/User/settings.json
 ln -s $DOTDOTDOT_PATH/system/vscode/keybindings.json ~/.config/Code/User/keybindings.json
 ln -s $DOTDOTDOT_PATH/system/vscode/snippets ~/.config/Code/User/snippets
+
+echo "Linking git"
+backup_file ~/.gitconfig
+mv ~/.gitconfig ~/.gitconfig-local
+ln -s $DOTDOTDOT_PATH/system/.gitconfig ~/.gitconfig
+
