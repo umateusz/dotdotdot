@@ -69,3 +69,19 @@ function video-frames(){
 function ls-img(){
     ls $@ | egrep -i '\.jpg$|\.png$|\.jpeg$'
 }
+
+
+function unpack-dir(){
+    local dir=$1
+    local dir=$(echo $dir | sed "s/^\///;s/\/$//")
+    if [ ! -d "$dir" ]; then
+        echo "Is not a dir."
+        return 0
+    fi
+    for f in $dir/*
+    do
+        f=$(basename $f)
+	mv $dir/$f "$dir"_"$f"
+    done
+    rmdir $dir
+}
