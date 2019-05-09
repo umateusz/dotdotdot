@@ -11,7 +11,13 @@
 
     "cSpell.language": ",pl,en,en-GB,en-US,pl-PL",
     "cSpell.userWords": [
-        "batch"
+        "batch",
+        "geopy",
+        "mongodb",
+        "numpy",
+        "pymongo",
+        "sqlite",
+        "tqdm"
     ],
     "cSpell.enabledLanguageIds": [
         "asciidoc",
