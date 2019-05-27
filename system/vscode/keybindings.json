@@ -5,4 +5,12 @@
         "command": "editor.action.copyLinesDownAction",
         "when": "editorTextFocus"
     },
+    {
+        "key": "ctrl+alt+u",
+        "command": "editor.action.transformToUppercase"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "editor.action.transformToLowercase"
+    },
 ]
