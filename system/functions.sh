@@ -85,3 +85,11 @@ function unpack-dir(){
     done
     rmdir $dir
 }
+
+function base64-decode(){
+    echo $1 | base64 --decode && echo
+}
+
+function base64-encode(){
+    echo $1 | base64
+}
