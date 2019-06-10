@@ -13,4 +13,14 @@
         "key": "ctrl+alt+i",
         "command": "editor.action.transformToLowercase"
     },
+    {
+        "key": "meta+t",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "meta+t",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
 ]
