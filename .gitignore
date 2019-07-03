@@ -1,4 +1,7 @@
 backups/*
 !backups/.gitkeep
 
+local/*
+!local/.gitkeep
+
 .vscode/
