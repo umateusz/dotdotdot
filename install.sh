@@ -39,9 +39,13 @@ ln -s $DOTDOTDOT_PATH/system/.zshrc ~/.zshrc
 echo "Running python pip install"
 /usr/bin/python3 -m pip install -r $DOTDOTDOT_PATH/system/py_requirements.txt
 
+echo "Cloning oh-my-zsh"
 git clone https://github.com/robbyrussell/oh-my-zsh.git $DOTDOTDOT_PATH/plugins/oh-my-zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions $DOTDOTDOT_PATH/plugins/oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting $DOTDOTDOT_PATH/plugins/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+echo "Changing default shell..."
+chsh -s $(which zsh)
 
 echo "Linking vscode settings..."
 backup_file ~/.config/Code/User/settings.json
