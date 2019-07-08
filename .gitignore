@@ -4,4 +4,7 @@ backups/*
 local/*
 !local/.gitkeep
 
+plugins/*
+!plugins/.gitkeep
+
 .vscode/
