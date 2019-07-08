@@ -11,11 +11,20 @@
 
     "cSpell.language": ",pl,en,en-GB,en-US,pl-PL",
     "cSpell.userWords": [
+        "astype",
         "batch",
+        "dropna",
         "geopy",
+        "groupby",
+        "iloc",
+        "inplace",
+        "isnan",
+        "kmeans",
         "mongodb",
         "numpy",
         "pymongo",
+        "pytz",
+        "sklearn",
         "sqlite",
         "tqdm"
     ],
@@ -47,6 +56,8 @@
         "typescript",
         "typescriptreact",
         "yml"
-    ]
+    ],
+    "window.zoomLevel": 1,
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",    
 }
 
