@@ -93,3 +93,7 @@ function base64-decode(){
 function base64-encode(){
     echo $1 | base64
 }
+
+function git-remove-local-branches(){
+    git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -d $branch; done
+}
