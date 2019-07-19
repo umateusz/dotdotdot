@@ -9,3 +9,4 @@ alias jupyter-clear="jupyter nbconvert --ClearOutputPreprocessor.enabled=True --
 alias jupyter-clear-all="find . -name \"*.ipynb\" | grep -v .ipynb_checkpoints | xargs -I {} jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace {}"
 alias sshj="ssh -L 8888:localhost:8888"
 alias fix-holding-keys="xset r on"
+alias ashex="od -A n -t x1"
