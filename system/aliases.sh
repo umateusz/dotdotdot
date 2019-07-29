@@ -10,3 +10,4 @@ alias jupyter-clear-all="find . -name \"*.ipynb\" | grep -v .ipynb_checkpoints |
 alias sshj="ssh -L 8888:localhost:8888"
 alias fix-holding-keys="xset r on"
 alias ashex="od -A n -t x1"
+alias sysrq-level="cat /proc/sys/kernel/sysrq"
