@@ -80,6 +80,7 @@ plugins=(
 	ubuntu
     zsh-syntax-highlighting
     zsh-autosuggestions 
+    extract
 )
 
 source $ZSH/oh-my-zsh.sh
