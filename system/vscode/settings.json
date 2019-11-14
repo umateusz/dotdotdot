@@ -7,6 +7,9 @@
     
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--generated-members=numpy.* ,torch.* ,cv2.*"
+    ],
     "python.formatting.provider": "black",
 
     "cSpell.language": ",pl,en,en-GB,en-US,pl-PL",
@@ -61,6 +64,5 @@
     "terminal.integrated.shell.linux": "/usr/bin/zsh",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    
 }
 
