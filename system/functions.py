@@ -13,7 +13,7 @@ def unique():
 def main():
     if len(sys.argv) == 1:
         # print all aliases
-        print("alias unique='~/dotdotdot/functions.py unique';")
+        print("alias unique='~/dotdotdot/system/functions.py unique';")
     elif sys.argv[1] == 'unique':
         unique()
 
