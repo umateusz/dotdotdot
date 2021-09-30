@@ -1,0 +1,13 @@
+- name: Install minimal packages
+  become: true
+  apt:
+    name: 
+      - vim
+      - tmux
+      - python3-pip
+      - python3-venv
+      - htop
+      - mc
+      - zsh
+    state: present
+    update_cache: yes
