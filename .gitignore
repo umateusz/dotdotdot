@@ -7,4 +7,7 @@ local/*
 plugins/*
 !plugins/.gitkeep
 
+.venvs/*
+!.venvs/.gitkeep
+
 .vscode/
