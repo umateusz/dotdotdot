@@ -1,16 +1,5 @@
-- name: Stat .gitconfig
-  stat: 
-    path: ~/.gitconfig
-  register: gitconfig_link
-
-- name: Backup gitconfig
-  copy:
-    src: "~/.gitconfig"
-    dest: "{{ dotdotdot_path }}/backups/~/.gitconfig_{{ ansible_date_time.iso8601_basic_short }}"
-  when: gitconfig_link.stat.islnk is defined and gitconfig_link.stat.islnk == False
-
-- name: Create symbolic link
-  file:
-    src: "{{ dotdotdot_path }}/system/.gitconfig"
-    dest: "~/.gitconfig"
-    state: link
+- name: Backup .gitconfig and link to dotdotdot settings
+  include_tasks:
+    file: "{{ dotdotdot_path }}/ansible/roles/common/tasks/backup_and_create_link.yml"
+  loop:
+    - { settings_path: "{{ dotdotdot_path }}/system/.gitconfig", original_path: "~/.gitconfig" }

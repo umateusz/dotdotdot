@@ -1,0 +1,16 @@
+- name: "Stat {{ item.original_path }}"
+  stat: 
+    path: "{{ item.original_path }}"
+  register: link
+
+- name: Backup zshrc
+  copy:
+    src: "{{ item.original_path }}"
+    dest: "{{ dotdotdot_path }}/backups/{{ item.original_path | basename }}{{ ansible_date_time.iso8601_basic_short }}"
+  when: link.stat.islnk is defined and link.stat.islnk == False
+
+- name: Create symbolic link
+  file:
+    src: "{{ item.settings_path }}"
+    dest: "{{ item.original_path }}"
+    state: link
