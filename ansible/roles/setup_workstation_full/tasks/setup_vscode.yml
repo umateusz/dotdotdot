@@ -4,4 +4,4 @@
   loop:
     - { settings_path: "{{ dotdotdot_path }}/system/vscode/settings.json", original_path: "~/.config/Code/User/settings.json" }
     - { settings_path: "{{ dotdotdot_path }}/system/vscode/keybindings.json", original_path: "~/.config/Code/User/keybindings.json" }
-    - { settings_path: "{{ dotdotdot_path }}/vscode/snippets", original_path: "~/.config/Code/User/snippets" }
+    - { settings_path: "{{ dotdotdot_path }}/system/vscode/snippets", original_path: "~/.config/Code/User/snippets" }
