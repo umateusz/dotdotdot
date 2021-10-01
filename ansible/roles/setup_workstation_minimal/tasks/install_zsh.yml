@@ -1,4 +1,13 @@
-# TODO: add backup
+
+# add backup
+- stat: path=~/.zshrc
+  register: zshrc_link
+
+- name: Backup zshrc
+  copy:
+    src: "~/.zshrc"
+    dest: "{{ dotdotdot_path }}/backups/.zshrc"
+  when: zshrc_link.stat.islnk is not defined or not zshrc_link.stat.islnk
 
 # ln -s $DOTDOTDOT_PATH/system/.zshrc ~/.zshrc
 - name: Create symbolic link
