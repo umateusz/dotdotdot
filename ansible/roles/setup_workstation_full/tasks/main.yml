@@ -12,6 +12,6 @@
 
 - include_tasks:
     file: install_vscode.yml
-    
+
 - include_tasks:
     file: setup_vscode.yml
