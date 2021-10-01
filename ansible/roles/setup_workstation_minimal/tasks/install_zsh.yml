@@ -1,6 +1,7 @@
 
 # add backup
-- stat: 
+- name: Stat .zshrc
+  stat: 
     path: ~/.zshrc
   register: zshrc_link
 

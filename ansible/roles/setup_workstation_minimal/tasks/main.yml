@@ -3,3 +3,6 @@
 
 - include_tasks:
     file: install_zsh.yml
+
+- include_tasks:
+    file: setup_git.yml
