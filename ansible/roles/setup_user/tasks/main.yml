@@ -1,0 +1,40 @@
+- name: Create anaconda group
+  become: yes
+  group:
+    name: anaconda
+    state: present
+
+- name: Create dialout group
+  become: yes
+  group:
+    name: dialout
+    state: present
+
+# add also to plugdev grup?
+
+- name: Create docker group
+  become: yes
+  group:
+    name: docker
+    state: present
+
+- name: Adding current user to group anaconda
+  become: yes
+  user:
+    name: "{{ ansible_user }}"
+    groups: anaconda
+    append: yes
+
+- name: Adding current user to group dialout
+  become: yes
+  user:
+    name: "{{ ansible_user }}"
+    groups: dialout
+    append: yes
+
+- name: Adding current user to group docker
+  become: yes
+  user:
+    name: "{{ ansible_user }}"
+    groups: docker
+    append: yes

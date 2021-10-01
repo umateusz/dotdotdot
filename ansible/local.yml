@@ -1,0 +1,6 @@
+---
+- hosts: all
+  roles:
+  - setup_user
+  - setup_workstation_minimal
+  - setup_workstation_full

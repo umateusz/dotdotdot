@@ -1,0 +1,17 @@
+- name: install packages
+  become: true
+  apt:
+    name: 
+      - imagemagick
+      - ffmpeg
+    state: present
+    update_cache: yes
+
+- include_tasks:
+    file: install_youtube_dl.yml
+
+- include_tasks:
+    file: install_vscode.yml
+
+- include_tasks:
+    file: setup_vscode.yml

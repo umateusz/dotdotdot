@@ -1,0 +1,5 @@
+- name: Backup .gitconfig and link to dotdotdot settings
+  include_tasks:
+    file: "{{ dotdotdot_path }}/ansible/roles/common/tasks/backup_and_create_link.yml"
+  loop:
+    - { settings_path: "{{ dotdotdot_path }}/system/.gitconfig", original_path: "~/.gitconfig" }

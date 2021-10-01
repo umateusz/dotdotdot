@@ -1,0 +1,6 @@
+- name: Create venv for youtube-dl
+  pip:
+    name:
+      - youtube-dl
+    virtualenv: "{{ dotdotdot_path }}/.venvs/youtube-dl"
+    virtualenv_command: /usr/bin/python3 -m venv
