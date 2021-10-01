@@ -1,3 +1,8 @@
+- name: Creates VS Code config directory
+  file:
+    path: ~/.config/Code/User/
+    state: directory
+
 - name: Backup VS Code settings and link to dotdotdot settings
   include_tasks:
     file: "{{ dotdotdot_path }}/ansible/roles/common/tasks/backup_and_create_link.yml"
