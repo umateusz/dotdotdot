@@ -1,4 +1,7 @@
 - include_tasks:
+    file: setup_sysctl.yml
+
+- include_tasks:
     file: install_required_packages.yml
 
 - include_tasks:
