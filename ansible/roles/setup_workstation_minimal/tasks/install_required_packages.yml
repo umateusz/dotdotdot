@@ -10,5 +10,7 @@
       - mc
       - zsh
       - wget
+      - p7zip-full
+      - gocryptfs
     state: present
     update_cache: yes
