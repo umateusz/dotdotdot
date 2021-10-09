@@ -5,6 +5,9 @@
     file: install_required_packages.yml
 
 - include_tasks:
+    file: install_fzf.yml
+
+- include_tasks:
     file: install_zsh.yml
 
 - include_tasks:

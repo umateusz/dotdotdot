@@ -70,6 +70,8 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+export FZF_BASE="$HOME/dotdotdot/plugins/fzf"
+
 plugins=(
 	git
 	python
@@ -81,6 +83,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions 
     extract
+	fzf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -114,3 +117,5 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

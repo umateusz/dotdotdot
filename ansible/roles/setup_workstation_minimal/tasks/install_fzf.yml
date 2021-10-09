@@ -1,0 +1,15 @@
+
+- name: Clone command-line fuzzy finder
+  git:
+    repo: https://github.com/junegunn/fzf.git
+    dest: "{{ dotdotdot_path }}/plugins/fzf"
+    clone: yes
+    update: yes
+  register: install_fzf
+
+- name: Install command-line fuzzy finder
+  command: "{{ dotdotdot_path }}/plugins/fzf/install"
+  when: install_fzf.changed
+
+
+
