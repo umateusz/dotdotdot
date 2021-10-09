@@ -1,0 +1,9 @@
+- name: Install the flatpak package from flathub
+  flatpak:
+    name: "{{ item }}"
+    state: present
+  loop:
+      - com.spotify.Client
+      - com.discordapp.Discord
+      - com.skype.Client
+

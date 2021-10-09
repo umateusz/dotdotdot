@@ -4,11 +4,15 @@
     name: 
       - imagemagick
       - ffmpeg
+      - flatpak
     state: present
     update_cache: yes
 
 - include_tasks:
     file: install_youtube_dl.yml
+
+- include_tasks:
+    file: install_flatpak_packages.yml
 
 - include_tasks:
     file: install_vscode.yml
