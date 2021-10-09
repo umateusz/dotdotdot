@@ -1,0 +1,10 @@
+#!/usr/bin/env -S "${DOTDOTDOT}/.venvs/dotdotdot/bin/python"
+
+import sys
+
+if __name__ == "__main__":
+    data = set()
+    for x in sys.stdin.readlines():
+        if x not in data:
+            print(x, end="")
+            data.add(x)

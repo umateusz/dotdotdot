@@ -19,6 +19,3 @@ SCRIPTS_WITH_COMPLETE=(\
 for script in "${SCRIPTS_WITH_COMPLETE[@]}"; do
     eval "$($DOTDOTDOT_PATH/.venvs/dotdotdot/bin/register-python-argcomplete $script)"
 done
-
-# load custom functions
-eval $($DOTDOTDOT_PATH/system/functions.py)
