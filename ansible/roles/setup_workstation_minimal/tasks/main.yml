@@ -12,3 +12,6 @@
 
 - include_tasks:
     file: setup_git.yml
+
+- include_tasks:
+    file: setup_custom_scripts.yml

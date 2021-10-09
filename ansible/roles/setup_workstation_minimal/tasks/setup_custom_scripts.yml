@@ -1,0 +1,17 @@
+- name: Create venv for dotdotdot scripts
+  pip:
+    name:
+      - argcomplete
+    virtualenv: "{{ dotdotdot_path }}/.venvs/dotdotdot"
+    virtualenv_command: /usr/bin/python3 -m venv
+  register: venv_created
+
+- name: Create directory for bash completion
+  file:
+    path: "{{ dotdotdot_path }}/plugins/bash_completion.d"
+    state: directory
+
+- name: Create bash completion file
+  command: "{{ dotdotdot_path }}/.venvs/dotdotdot/bin/activate-global-python-argcomplete --dest {{ dotdotdot_path }}/plugins/bash_completion.d/"
+  when: venv_created.changed
+
