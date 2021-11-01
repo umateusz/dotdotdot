@@ -3,6 +3,7 @@ DOTDOTDOT_PATH=~/dotdotdot
 . $DOTDOTDOT_PATH/system/functions.sh
 . $DOTDOTDOT_PATH/system/aliases.sh
 export PATH=$PATH:$DOTDOTDOT_PATH/system/bin
+export PATH=$PATH:$HOME/go/bin
 
 for f in $DOTDOTDOT_PATH/local/*(.N); do
     . $f

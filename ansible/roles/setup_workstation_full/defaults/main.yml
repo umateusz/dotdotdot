@@ -11,3 +11,7 @@ visual_studio_code_build: stable
 # with a trailing slash.
 visual_studio_code_mirror: 'https://packages.microsoft.com'
 
+# I don't know how to pass it from gantsign.golang defaults to install glow
+dotdotdot_golang_version: '1.17.2'
+dotdotdot_golang_install_dir: '/opt/go/{{ dotdotdot_golang_version }}'
+

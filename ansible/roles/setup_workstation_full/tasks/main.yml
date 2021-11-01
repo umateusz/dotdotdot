@@ -8,6 +8,12 @@
     state: present
     update_cache: yes
 
+- include_role:
+    name: gantsign.golang
+  vars:
+    golang_version: '{{ dotdotdot_golang_version }}'
+    golang_install_dir: "{{ dotdotdot_golang_install_dir }}"
+
 - include_tasks:
     file: install_youtube_dl.yml
 
@@ -16,6 +22,9 @@
 
 - include_tasks:
     file: install_vscode.yml
+
+- include_tasks:
+    file: install_glow.yml
 
 - include_tasks:
     file: setup_vscode.yml

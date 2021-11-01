@@ -1,0 +1,13 @@
+- name: Clone glow
+  git:
+    repo: https://github.com/charmbracelet/glow.git
+    dest: "{{ dotdotdot_path }}/plugins/glow"
+    clone: yes
+    update: yes
+  register: install_glow
+
+- name: Install glow
+  command:
+    chdir: "{{ dotdotdot_path }}/plugins/glow"
+    cmd: "{{ dotdotdot_golang_install_dir }}/bin/go install"
+  when: install_glow.changed
