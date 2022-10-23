@@ -3,7 +3,6 @@
     name: "{{ item }}"
     state: present
   loop:
-      - com.spotify.Client
-      - com.discordapp.Discord
-      - com.skype.Client
-
+    - com.spotify.Client
+    - com.discordapp.Discord
+    - com.skype.Client

@@ -1,6 +1,6 @@
 # https://github.com/gantsign/ansible-role-visual-studio-code
 # Visual Studio Code version number (defaults to the latest version)
-visual_studio_code_version: ''
+visual_studio_code_version: ""
 
 # Build (either 'stable' or 'insiders') https://code.visualstudio.com/insiders/
 # Ubuntu only (code-insiders isn't in Microsoft's RPM repo)
@@ -9,9 +9,8 @@ visual_studio_code_build: stable
 # Mirror server for fetching the public keys and the Visual Studio Code
 # installation package. The URL may include directories. The URL must not end
 # with a trailing slash.
-visual_studio_code_mirror: 'https://packages.microsoft.com'
+visual_studio_code_mirror: "https://packages.microsoft.com"
 
 # I don't know how to pass it from gantsign.golang defaults to install glow
-dotdotdot_golang_version: '1.17.2'
-dotdotdot_golang_install_dir: '/opt/go/{{ dotdotdot_golang_version }}'
-
+dotdotdot_golang_version: "1.17.2"
+dotdotdot_golang_install_dir: "/opt/go/{{ dotdotdot_golang_version }}"

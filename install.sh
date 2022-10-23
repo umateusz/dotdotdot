@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Running apt install..."
-sudo apt update -y && sudo apt install git ansible
+sudo apt update -y && sudo apt install git ansible sshpass
 
 echo "Install ansible plugins..."
 ansible-galaxy collection install ansible.posix

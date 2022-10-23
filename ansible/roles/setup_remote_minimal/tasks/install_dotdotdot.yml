@@ -1,0 +1,7 @@
+- name: Clone dotdotdot(self)
+  git:
+    repo: https://github.com/umateusz/dotdotdot.git
+    dest: "{{ dotdotdot_path }}"
+    clone: yes
+    update: yes
+  register: install_dotdotdot

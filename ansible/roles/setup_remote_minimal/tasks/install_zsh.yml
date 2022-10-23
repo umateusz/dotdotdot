@@ -2,7 +2,10 @@
   include_tasks:
     file: "{{ dotdotdot_path }}/ansible/roles/common/tasks/backup_and_create_link.yml"
   loop:
-    - { settings_path: "{{ dotdotdot_path }}/system/.zshrc", original_path: "~/.zshrc" }
+    - {
+        settings_path: "{{ dotdotdot_path }}/system/.zshrc",
+        original_path: "~/.zshrc",
+      }
 
 # git clone https://github.com/robbyrussell/oh-my-zsh.git $DOTDOTDOT_PATH/plugins/oh-my-zsh
 - name: Install oh-my-zsh
@@ -34,4 +37,3 @@
   user:
     name: "{{ ansible_user }}"
     shell: /usr/bin/zsh
-

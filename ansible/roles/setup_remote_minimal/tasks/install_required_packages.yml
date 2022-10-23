@@ -1,0 +1,9 @@
+- name: Install minimal packages
+  become: true
+  apt:
+    name: 
+      - git
+      - zsh
+      - python3-venv
+    state: present
+    update_cache: yes

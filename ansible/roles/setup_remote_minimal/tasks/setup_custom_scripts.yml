@@ -14,4 +14,3 @@
 - name: Create bash completion file
   command: "{{ dotdotdot_path }}/.venvs/dotdotdot/bin/activate-global-python-argcomplete --dest {{ dotdotdot_path }}/plugins/bash_completion.d/"
   when: venv_created.changed
-

@@ -97,3 +97,7 @@ function base64-encode(){
 function git-remove-local-branches(){
     git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -d $branch; done
 }
+
+function hydra-autocomplete(){
+    eval "$(python $@ -sc install=zsh)"
+}
