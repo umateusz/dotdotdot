@@ -1,4 +1,5 @@
-alias yt="youtube-dl --add-metadata -i"
+alias yt="$DOTDOTDOT/.venvs/youtube-dl/bin/youtube-dl --add-metadata -i"
+alias docker-stop-all="docker stop $(docker ps -aq)"
 alias git-url="git config --get remote.origin.url"
 alias public-ip="curl ifconfig.co"
 alias public-ip-json="curl ifconfig.co/json"

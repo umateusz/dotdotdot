@@ -64,5 +64,6 @@
     "terminal.integrated.shell.linux": "/usr/bin/zsh",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "git.suggestSmartCommit": false,
 }
 
